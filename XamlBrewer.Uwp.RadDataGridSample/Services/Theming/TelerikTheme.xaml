@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- http://www.telerik.com/help/windows-8-xaml/datagrid-styling-teleriknamedbrushes.html -->
+    <SolidColorBrush x:Key="TelerikGridHeaderBackgroundBrush"
+                     Color="#7A6F41" />
+    <SolidColorBrush x:Key="TelerikGridGroupHeaderBackgroundBrush"
+                     Color="#7A6F41" />
+    <SolidColorBrush x:Key="TelerikGridServiceColumnBackgroundBrush"
+                     Color="#7A6F41" />
+    <SolidColorBrush x:Key="TelerikGridHeaderForegroundBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="TelerikGridGroupHeaderForegroundBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="TelerikGridServiceColumnForegroundBrush"
+                     Color="White" />
+</ResourceDictionary>

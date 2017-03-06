@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using XamlBrewer.Uwp.RadDataGridSample.ViewModels;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +26,9 @@ namespace XamlBrewer.Uwp.RadDataGridSample
         public MainPage()
         {
             this.InitializeComponent();
+            this.DataContext = new MainPageViewModel();
         }
+
+        internal MainPageViewModel ViewModel => this.DataContext as MainPageViewModel;
     }
 }
