@@ -55,7 +55,7 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
 
                 result.Add(new Location()
                 {
-                    Code = "GB",
+                    Code = "UK",
                     Name = "United Kingdom"
                 });
 
@@ -75,12 +75,6 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                 {
                     Code = "LV",
                     Name = "Las Vegas"
-                });
-
-                result.Add(new Location()
-                {
-                    Code = "MA",
-                    Name = "Malastare"
                 });
 
                 result.Add(new Location()

@@ -1,10 +1,11 @@
-﻿<Page x:Class="XamlBrewer.Uwp.RadDataGridSample.MainPage"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:grid="using:Telerik.UI.Xaml.Controls.Grid"
       xmlns:core="using:Telerik.Data.Core"
+      xmlns:Primitives="using:Telerik.UI.Xaml.Controls.Grid.Primitives"
+      x:Class="XamlBrewer.Uwp.RadDataGridSample.MainPage"
       mc:Ignorable="d">
 
     <Grid Background="{StaticResource PageBackgroundBrush}">
@@ -13,13 +14,14 @@
                           Background="Transparent"
                           BorderBrush="Transparent"
                           Foreground="{StaticResource PageForegroundBrush}"
-                          GridLinesVisibility="None">
+                          GridLinesVisibility="None"
+                          CanUserChooseColumns="True">
             <grid:RadDataGrid.Columns>
                 <grid:DataGridTextColumn PropertyName="Name"
                                          Header="Name" />
                 <grid:DataGridTemplateColumn Header="Location">
                     <grid:DataGridTemplateColumn.GroupDescriptor>
-                        <core:PropertyGroupDescriptor PropertyName="LocationCode" />
+                        <core:PropertyGroupDescriptor PropertyName="LocationName" />
                     </grid:DataGridTemplateColumn.GroupDescriptor>
                     <grid:DataGridTemplateColumn.CellContentTemplate>
                         <DataTemplate>

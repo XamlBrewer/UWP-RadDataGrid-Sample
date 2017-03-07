@@ -17,9 +17,9 @@
     <SolidColorBrush x:Key="TitlebarBackgroundBrush"
                      Color="#B1560F" />
     <SolidColorBrush x:Key="TitlebarBackgroundDarkBrush"
-                     Color="#004C28" />
+                     Color="#75390A" />
     <SolidColorBrush x:Key="TitlebarBackgroundLightBrush"
-                     Color="#AE973B" />
+                     Color="#ED7F2C" />
     <SolidColorBrush x:Key="StatusbarBackgroundBrush"
                      Color="#B1560F" />
 

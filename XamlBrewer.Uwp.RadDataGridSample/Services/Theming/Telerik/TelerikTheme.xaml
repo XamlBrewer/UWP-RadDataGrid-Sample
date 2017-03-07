@@ -1,6 +1,15 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!-- http://www.telerik.com/help/windows-8-xaml/datagrid-styling-teleriknamedbrushes.html -->
+    <Color x:Key="TelerikSelectedColor">#B1560F</Color>
+    <Color x:Key="TelerikHighlightedColor">#75390A</Color>
+
+    <!-- Add TelerikGridColumnChooserOpenMouseOver etc from Grid.UWP/Themes/ThemeresourcesLight.xaml in GitHub -->
+    <BitmapImage x:Key="TelerikGridColumnChooserOpenMouseOver"
+                 UriSource="ms-appx:///Services/Theming/Telerik/Assets/column_chooser_btn_themed.png" />
+    <BitmapImage x:Key="TelerikGridColumnChooserCloseMouseOver"
+                 UriSource="ms-appx:///Services/Theming/Telerik/Assets/close_btn_themed.png" />
+
     <SolidColorBrush x:Key="TelerikGridHeaderBackgroundBrush"
                      Color="#7A6F41" />
     <SolidColorBrush x:Key="TelerikGridGroupHeaderBackgroundBrush"

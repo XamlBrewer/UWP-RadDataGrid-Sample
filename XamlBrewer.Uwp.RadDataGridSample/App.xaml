@@ -23,7 +23,7 @@
                 <ResourceDictionary Source="Services/Theming/Theme.xaml" />
                 <ResourceDictionary>
                     <telerik:UserThemeResources x:Key="MyResources"
-                                                 LightResourcesPath="ms-appx:///Services/Theming/TelerikTheme.xaml" />
+                                                LightResourcesPath="ms-appx:///Services/Theming/Telerik/TelerikTheme.xaml" />
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

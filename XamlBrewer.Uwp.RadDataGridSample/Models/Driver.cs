@@ -25,6 +25,8 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Models
                                      where c.Code == LocationCode
                                      select c).FirstOrDefault();
 
+        public string LocationName => Location.Name;
+
         public List<Location> Victories
         {
             get

@@ -42,6 +42,15 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
 
                 result.Add(new Driver()
                 {
+                    Name = "Jacky Ickx",
+                    Team = "Scuderia Ferrari",
+                    LocationCode = "BE",
+                    Experience = Experience.Champion,
+                    MostRecentVictory = new DateTime(1983, 1, 15)
+                });
+
+                result.Add(new Driver()
+                {
                     Name = "Fernando Alonso",
                     Team = "McLaren F1",
                     LocationCode = "SP",
@@ -51,7 +60,7 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                 result.Add(new Driver()
                 {
                     Name = "Anakin Skywalker",
-                    Team = "Indie",
+                    Team = "The Force",
                     LocationCode = "TA",
                     Experience = Experience.Winner,
                     VictoryCodes = "TA"
@@ -60,7 +69,7 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                 result.Add(new Driver()
                 {
                     Name = "Sebulba",
-                    Team = "Indie",
+                    Team = "Independent Driver",
                     LocationCode = "TA",
                     Experience = Experience.Champion,
                     VictoryCodes = "TA"
@@ -73,6 +82,51 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                     LocationCode = "US",
                     Experience = Experience.Legend,
                     VictoryCodes = "DA,DO,KA,LV"
+                });
+
+                result.Add(new Driver()
+                {
+                    Name = "Dick Dastardly",
+                    Team = "Wacky Races",
+                    LocationCode = "US",
+                    Experience = Experience.Rookie,
+                    VictoryCodes = ""
+                });
+
+                result.Add(new Driver()
+                {
+                    Name = "Penelope Pitstop",
+                    Team = "Wacky Races",
+                    LocationCode = "US",
+                    Experience = Experience.Winner,
+                    VictoryCodes = ""
+                });
+
+                result.Add(new Driver()
+                {
+                    Name = "Jeremy Clarkson",
+                    Team = "The Grand Tour",
+                    LocationCode = "UK",
+                    Experience = Experience.Winner,
+                    VictoryCodes = ""
+                });
+
+                result.Add(new Driver()
+                {
+                    Name = "Richard Hammond",
+                    Team = "The Grand Tour",
+                    LocationCode = "UK",
+                    Experience = Experience.Podium,
+                    VictoryCodes = ""
+                });
+
+                result.Add(new Driver()
+                {
+                    Name = "James May",
+                    Team = "The Grand Tour",
+                    LocationCode = "UK",
+                    Experience = Experience.Rookie,
+                    VictoryCodes = ""
                 });
 
                 return result.OrderBy(x => x.Name).ToList();
