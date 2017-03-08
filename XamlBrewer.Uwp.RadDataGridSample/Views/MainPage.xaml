@@ -35,9 +35,12 @@
                     </grid:DataGridTemplateColumn.CellContentTemplate>
                 </grid:DataGridTemplateColumn>
                 <grid:DataGridTextColumn PropertyName="Team"
-                                         Header="Team" />
+                                         Header="Team"
+                                        />
                 <grid:DataGridDateColumn PropertyName="MostRecentVictory"
-                                         Header="Last win" />
+                                         Header="Last win"
+                                         CellContentFormat="{}{0:d}"
+                                         CanUserGroup="False" />
                 <grid:DataGridTemplateColumn Header="Experience">
                     <grid:DataGridTemplateColumn.GroupDescriptor>
                         <core:PropertyGroupDescriptor PropertyName="Experience" />
