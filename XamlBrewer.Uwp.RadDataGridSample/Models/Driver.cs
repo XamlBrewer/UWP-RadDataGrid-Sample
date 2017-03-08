@@ -21,6 +21,8 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Models
 
         public DateTime? MostRecentVictory { get; set; }
 
+        public double ExperienceAsNumber => (double)Experience;
+
         public Location Location => (from c in Dal.Locations
                                      where c.Code == LocationCode
                                      select c).FirstOrDefault();

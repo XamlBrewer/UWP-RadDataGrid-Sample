@@ -8,7 +8,7 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Models
 {
     public enum Experience
     {
-        Rookie,
+        Rookie = 1,
         Podium,
         Winner,
         Champion,

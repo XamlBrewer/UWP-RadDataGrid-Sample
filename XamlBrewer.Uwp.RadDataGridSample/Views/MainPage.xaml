@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:grid="using:Telerik.UI.Xaml.Controls.Grid"
       xmlns:core="using:Telerik.Data.Core"
-      xmlns:Primitives="using:Telerik.UI.Xaml.Controls.Grid.Primitives"
+      xmlns:controls="using:XamlBrewer.Uwp.Controls"
       x:Class="XamlBrewer.Uwp.RadDataGridSample.MainPage"
       mc:Ignorable="d">
 
@@ -38,6 +38,21 @@
                                          Header="Team" />
                 <grid:DataGridDateColumn PropertyName="MostRecentVictory"
                                          Header="Last win" />
+                <grid:DataGridTemplateColumn Header="Experience">
+                    <grid:DataGridTemplateColumn.GroupDescriptor>
+                        <core:PropertyGroupDescriptor PropertyName="Experience" />
+                    </grid:DataGridTemplateColumn.GroupDescriptor>
+                    <grid:DataGridTemplateColumn.CellContentTemplate>
+                        <DataTemplate>
+                            <controls:Rating Maximum="5"
+                                             Value="{Binding ExperienceAsNumber}"
+                                             EmptyImage="ms-appx:///Assets/RatingIcons/wreath_empty.png"
+                                             FilledImage="ms-appx:///Assets/RatingIcons/wreath_full.png"
+                                             IsInteractive="False"
+                                             ItemHeight="24" />
+                        </DataTemplate>
+                    </grid:DataGridTemplateColumn.CellContentTemplate>
+                </grid:DataGridTemplateColumn>
             </grid:RadDataGrid.Columns>
         </grid:RadDataGrid>
     </Grid>
