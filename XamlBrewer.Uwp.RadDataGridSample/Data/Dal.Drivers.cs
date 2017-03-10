@@ -46,7 +46,8 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                     Team = "Scuderia Ferrari",
                     LocationCode = "BE",
                     Experience = Experience.Champion,
-                    MostRecentVictory = new DateTime(1983, 1, 15)
+                    MostRecentVictory = new DateTime(1983, 1, 15),
+                    IsStillActive = false
                 });
 
                 result.Add(new Driver()
@@ -63,7 +64,7 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                     Team = "The Force",
                     LocationCode = "TA",
                     Experience = Experience.Winner,
-                    VictoryCodes = "TA"
+                    IsStillActive = false
                 });
 
                 result.Add(new Driver()
@@ -72,7 +73,7 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                     Team = "Independent Driver",
                     LocationCode = "TA",
                     Experience = Experience.Champion,
-                    VictoryCodes = "TA"
+                    IsStillActive = false
                 });
 
                 result.Add(new Driver()
@@ -80,8 +81,7 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                     Name = "Jimmie Johnson",
                     Team = "Hendrick Motorsports",
                     LocationCode = "US",
-                    Experience = Experience.Legend,
-                    VictoryCodes = "DA,DO,KA,LV"
+                    Experience = Experience.Legend
                 });
 
                 result.Add(new Driver()
@@ -90,7 +90,7 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                     Team = "Wacky Races",
                     LocationCode = "US",
                     Experience = Experience.Rookie,
-                    VictoryCodes = ""
+                    IsStillActive = false
                 });
 
                 result.Add(new Driver()
@@ -99,7 +99,7 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                     Team = "Wacky Races",
                     LocationCode = "US",
                     Experience = Experience.Winner,
-                    VictoryCodes = ""
+                    IsStillActive = false
                 });
 
                 result.Add(new Driver()
@@ -107,8 +107,7 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                     Name = "Jeremy Clarkson",
                     Team = "The Grand Tour",
                     LocationCode = "UK",
-                    Experience = Experience.Winner,
-                    VictoryCodes = ""
+                    Experience = Experience.Winner
                 });
 
                 result.Add(new Driver()
@@ -116,8 +115,7 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                     Name = "Richard Hammond",
                     Team = "The Grand Tour",
                     LocationCode = "UK",
-                    Experience = Experience.Podium,
-                    VictoryCodes = ""
+                    Experience = Experience.Podium
                 });
 
                 result.Add(new Driver()
@@ -125,8 +123,7 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                     Name = "James May",
                     Team = "The Grand Tour",
                     LocationCode = "UK",
-                    Experience = Experience.Rookie,
-                    VictoryCodes = ""
+                    Experience = Experience.Rookie
                 });
 
                 return result.OrderBy(x => x.Name).ToList();

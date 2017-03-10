@@ -5,9 +5,17 @@
       xmlns:grid="using:Telerik.UI.Xaml.Controls.Grid"
       xmlns:core="using:Telerik.Data.Core"
       xmlns:controls="using:XamlBrewer.Uwp.Controls"
+      xmlns:mvvm="using:Mvvm"
       x:Class="XamlBrewer.Uwp.RadDataGridSample.MainPage"
       mc:Ignorable="d">
-
+    <Page.Resources>
+        <mvvm:BooleanToBrushConverter x:Key="BooleanToBrushConverter"
+                                      TrueValue="Gold"
+                                      FalseValue="{StaticResource TenPercentDarkerBrush}" />
+        <mvvm:BooleanToStringConverter x:Key="BooleanToStringConverter"
+                                      TrueValue="Active"
+                                      FalseValue="Retired" />
+    </Page.Resources>
     <Grid Background="{StaticResource PageBackgroundBrush}">
         <grid:RadDataGrid ItemsSource="{x:Bind ViewModel.Drivers}"
                           AutoGenerateColumns="False"
@@ -35,8 +43,7 @@
                     </grid:DataGridTemplateColumn.CellContentTemplate>
                 </grid:DataGridTemplateColumn>
                 <grid:DataGridTextColumn PropertyName="Team"
-                                         Header="Team"
-                                        />
+                                         Header="Team" />
                 <grid:DataGridDateColumn PropertyName="MostRecentVictory"
                                          Header="Last win"
                                          CellContentFormat="{}{0:d}"
@@ -53,6 +60,25 @@
                                              FilledImage="ms-appx:///Assets/RatingIcons/wreath_full.png"
                                              IsInteractive="False"
                                              ItemHeight="24" />
+                        </DataTemplate>
+                    </grid:DataGridTemplateColumn.CellContentTemplate>
+                </grid:DataGridTemplateColumn>
+                <!-- No customization possible :-(-->
+                <!--<grid:DataGridBooleanColumn Header="Active"
+                                            PropertyName="IsStillActive" />-->
+                <grid:DataGridTemplateColumn Header="Active">
+                    <grid:DataGridTemplateColumn.GroupDescriptor>
+                        <core:PropertyGroupDescriptor PropertyName="ActiveDescription" />
+                    </grid:DataGridTemplateColumn.GroupDescriptor>
+                    <grid:DataGridTemplateColumn.CellContentTemplate>
+                        <DataTemplate>
+                            <Path Data="{StaticResource SteeringWheelIcon}"
+                                  VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"
+                                  Height="20"
+                                  Width="20"
+                                  Fill="{Binding IsStillActive, Converter={StaticResource BooleanToBrushConverter}}"
+                                  Stretch="Uniform" />
                         </DataTemplate>
                     </grid:DataGridTemplateColumn.CellContentTemplate>
                 </grid:DataGridTemplateColumn>

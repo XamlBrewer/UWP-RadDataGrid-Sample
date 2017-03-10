@@ -20,7 +20,12 @@
                    Foreground="Silver"
                    FontSize="24"
                    VerticalAlignment="Center"
-                   Grid.Column="1">This app is a test container for the Telerik RadDataGrid for UWP.</TextBlock>
+                   Grid.Column="1">
+                        <Run>This app is a test container for the Telerik RadDataGrid for UWP.</Run>
+                        <LineBreak />
+                        <LineBreak/>
+                        <Run FontSize="16">Icons by Alica Noir and Zidney from The Noun Project. </Run>
+        </TextBlock>
 
         <Viewbox Grid.Column="2"
                  StretchDirection="DownOnly"

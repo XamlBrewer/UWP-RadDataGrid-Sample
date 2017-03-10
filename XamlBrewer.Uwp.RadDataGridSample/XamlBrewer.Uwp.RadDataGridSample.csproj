@@ -101,6 +101,7 @@
     <Compile Include="Models\Experience.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Mvvm\BindableBase.cs" />
+    <Compile Include="Mvvm\BooleanToValueConverter.cs" />
     <Compile Include="Mvvm\DelegateCommand.cs" />
     <Compile Include="Services\Icons\Icon.cs" />
     <Compile Include="Services\Navigation\Navigation.cs" />

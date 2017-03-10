@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using XamlBrewer.Uwp.RadDataGridSample.Data;
 
 namespace XamlBrewer.Uwp.RadDataGridSample.Models
@@ -17,9 +14,11 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Models
 
         public Experience Experience { get; set; }
 
-        public string VictoryCodes { get; set; }
-
         public DateTime? MostRecentVictory { get; set; }
+
+        public bool IsStillActive { get; set; } = true;
+
+        public string ActiveDescription => IsStillActive ? "Active" : "Retired";
 
         public double ExperienceAsNumber => (double)Experience;
 
@@ -29,29 +28,5 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Models
 
         public string LocationName => Location.Name;
 
-        public List<Location> Victories
-        {
-            get
-            {
-                List<Location> result = new List<Location>();
-                if (VictoryCodes == null)
-                {
-                    return result;
-                }
-
-                foreach (var code in this.VictoryCodes.Split(',', ' '))
-                {
-                    var country = (from c in Dal.Locations
-                                   where c.Code == code
-                                   select c).FirstOrDefault();
-                    if (country != null)
-                    {
-                        result.Add(country);
-                    }
-                }
-
-                return result;
-            }
-        }
     }
 }
