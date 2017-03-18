@@ -9,6 +9,8 @@
                  UriSource="ms-appx:///Services/Theming/Telerik/Assets/column_chooser_btn_themed.png" />
     <BitmapImage x:Key="TelerikGridColumnChooserCloseMouseOver"
                  UriSource="ms-appx:///Services/Theming/Telerik/Assets/close_btn_themed.png" />
+    <BitmapImage x:Key="TelerikGridFilterFlyoutExpanderIcon"
+                 UriSource="ms-appx:///Telerik.UI.Xaml.Grid.UWP/Assets/FilterFlyout/ic_arrow_down_white.png" />
 
     <SolidColorBrush x:Key="TelerikGridHeaderBackgroundBrush"
                      Color="#7A6F41" />
