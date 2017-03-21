@@ -13,8 +13,8 @@
                                       TrueValue="Gold"
                                       FalseValue="{StaticResource TenPercentDarkerBrush}" />
         <mvvm:BooleanToStringConverter x:Key="BooleanToStringConverter"
-                                      TrueValue="Active"
-                                      FalseValue="Retired" />
+                                       TrueValue="Active"
+                                       FalseValue="Retired" />
     </Page.Resources>
     <Grid Background="{StaticResource PageBackgroundBrush}">
         <grid:RadDataGrid ItemsSource="{x:Bind ViewModel.Drivers}"
@@ -29,7 +29,8 @@
                                          Header="Name" />
                 <grid:DataGridTemplateColumn Header="Location">
                     <grid:DataGridTemplateColumn.GroupDescriptor>
-                        <core:PropertyGroupDescriptor PropertyName="LocationName" />
+                        <core:PropertyGroupDescriptor PropertyName="LocationName"
+                                                      DisplayContent="Location" />
                     </grid:DataGridTemplateColumn.GroupDescriptor>
                     <grid:DataGridTemplateColumn.CellContentTemplate>
                         <DataTemplate>
@@ -66,9 +67,14 @@
                 <!-- No customization possible :-(-->
                 <!--<grid:DataGridBooleanColumn Header="Active"
                                             PropertyName="IsStillActive" />-->
-                <grid:DataGridTemplateColumn Header="Active">
+                <grid:DataGridTemplateColumn Header="Active"
+                                             CanUserSort="True">
+                    <grid:DataGridTemplateColumn.SortDescriptor>
+                        <core:PropertySortDescriptor PropertyName="IsStillActive" />
+                    </grid:DataGridTemplateColumn.SortDescriptor>
                     <grid:DataGridTemplateColumn.GroupDescriptor>
-                        <core:PropertyGroupDescriptor PropertyName="ActiveDescription" />
+                        <core:PropertyGroupDescriptor PropertyName="ActiveDescription"
+                                                      DisplayContent="Active" />
                     </grid:DataGridTemplateColumn.GroupDescriptor>
                     <grid:DataGridTemplateColumn.CellContentTemplate>
                         <DataTemplate>
