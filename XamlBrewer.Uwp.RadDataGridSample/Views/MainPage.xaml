@@ -23,6 +23,7 @@
                           BorderBrush="Transparent"
                           Foreground="{StaticResource PageForegroundBrush}"
                           GridLinesVisibility="None"
+                          UserFilterMode="Enabled"
                           CanUserChooseColumns="True">
             <grid:RadDataGrid.Columns>
                 <grid:DataGridTextColumn PropertyName="Name"
@@ -68,7 +69,8 @@
                 <!--<grid:DataGridBooleanColumn Header="Active"
                                             PropertyName="IsStillActive" />-->
                 <grid:DataGridTemplateColumn Header="Active"
-                                             CanUserSort="True">
+                                             CanUserSort="True"
+                                             CanUserFilter="True">
                     <grid:DataGridTemplateColumn.SortDescriptor>
                         <core:PropertySortDescriptor PropertyName="IsStillActive" />
                     </grid:DataGridTemplateColumn.SortDescriptor>
@@ -92,34 +94,3 @@
         </grid:RadDataGrid>
     </Grid>
 </Page>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
