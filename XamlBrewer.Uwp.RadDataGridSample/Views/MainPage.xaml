@@ -24,7 +24,8 @@
                           Foreground="{StaticResource PageForegroundBrush}"
                           GridLinesVisibility="None"
                           UserFilterMode="Enabled"
-                          CanUserChooseColumns="True">
+                          CanUserChooseColumns="True"
+                          ColumnResizeHandleDisplayMode="Always">
             <grid:RadDataGrid.Columns>
                 <grid:DataGridTextColumn PropertyName="Name"
                                          Header="Name" />

@@ -55,7 +55,8 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                     Name = "Fernando Alonso",
                     Team = "McLaren F1",
                     LocationCode = "SP",
-                    Experience = Experience.Legend
+                    Experience = Experience.Legend,
+                    MostRecentVictory = new DateTime(2013, 5, 12)
                 });
 
                 result.Add(new Driver()
@@ -81,7 +82,8 @@ namespace XamlBrewer.Uwp.RadDataGridSample.Data
                     Name = "Jimmie Johnson",
                     Team = "Hendrick Motorsports",
                     LocationCode = "US",
-                    Experience = Experience.Legend
+                    Experience = Experience.Legend,
+                    MostRecentVictory = new DateTime(2016, 11, 20)
                 });
 
                 result.Add(new Driver()
